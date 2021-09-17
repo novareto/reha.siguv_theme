@@ -21,7 +21,7 @@ setup(
     version=version,
     author='Souheil CHELFOUH',
     author_email='trollfot@gmail.com',
-    description='UKH theme for UVCReha',
+    description='SIGUV theme for UVCReha',
     long_description=(
         open("README.rst").read() + "\n" +
         open(os.path.join("docs", "HISTORY.rst")).read()
