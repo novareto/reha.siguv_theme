@@ -26,7 +26,7 @@ bootstrap_js = Resource(
     bottom=True
 )
 
-siguvtheme = Group(
+theme = Group(
     [
         application_webpush,
         custom_css,

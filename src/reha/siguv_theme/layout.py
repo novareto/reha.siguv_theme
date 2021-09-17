@@ -21,7 +21,7 @@ class Layout:
         return self._template.macros
 
     def render(self, content, **namespace):
-        siguvtheme.need()
+        theme.need()
         return self._template.render(content=content, **namespace)
 
 
