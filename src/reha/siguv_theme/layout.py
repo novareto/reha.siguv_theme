@@ -1,10 +1,7 @@
 from reiter.application.browser import TemplateLoader
 from uvcreha.request import Request
 from reha.siguv_theme.resources import theme
-from reha.siguv_theme import ui
-
-
-TEMPLATES = TemplateLoader("./templates")
+from reha.siguv_theme import ui, TEMPLATES
 
 
 @ui.register_layout(Request)
@@ -15,10 +12,6 @@ class Layout:
     def __init__(self, request, name):
         self.name = name
         self._template = TEMPLATES["layout.pt"]
-
-    @property
-    def macros(self):
-        return self._template.macros
 
     def render(self, content, **namespace):
         theme.need()

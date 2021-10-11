@@ -1,4 +1,5 @@
-from reiter.application.browser import registries
+from reiter.application.browser import registries, TemplateLoader
 
 
-ui = registries.UIRegistry()
+TEMPLATES = TemplateLoader("./templates")
+ui = registries.UIRegistry(macros=TEMPLATES['macros.pt'].macros)
