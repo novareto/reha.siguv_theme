@@ -8,11 +8,10 @@ GLOBAL_MACROS = TEMPLATES['macros.pt'].macros
 
 class Layout:
 
-    __slots__ = ("_template", "name")
+    _template = TEMPLATES["layout.pt"]
 
     def __init__(self, request, name):
         self.name = name
-        self._template = TEMPLATES["layout.pt"]
 
     def render(self, content, **namespace):
         theme.need()
