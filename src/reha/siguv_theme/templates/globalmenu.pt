@@ -5,13 +5,8 @@
         <img src="static/reha.siguv_theme/bg-etem.svg" alt="" />
       </a>
       <ul class="navbar-nav mr-auto">
-        <!--
-        <li tal:repeat="um provider.menus['globalmenu'].entries" tal:attributes="class um.selected and 'active' or ''">
-          <a tal:attributes="href um.url()">
-            <span class="menu-item-title" tal:content="um.title" />
-          </a>
-        </li>
-        -->
+        <li tal:repeat="action actions"
+            tal:content="action" />
       </ul>
       <div id="sidebar-handle">
         <img class="icon icon-inline icon-lg" src="static/reha.siguv_theme/justify.svg" alt="Sign Sidebar" style="margin: -3px 5px 0 0 !important;">

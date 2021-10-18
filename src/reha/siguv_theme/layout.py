@@ -23,7 +23,9 @@ def sitecap(request, name, view):
 
 
 def globalmenu(request, name, view):
-    return TEMPLATES["globalmenu.pt"].render(request=request)
+    actions = request.app.get_actions(request)
+    return TEMPLATES["globalmenu.pt"].render(
+        request=request, actions=actions)
 
 
 def navbar(request, name, view):
