@@ -15,6 +15,16 @@
 </div>
 
 
+<div metal:define-macro="form_action" tal:condition="exists: action">
+	BOOOOOT
+	<button
+	     name='form.trigger'
+	     tal:attributes="value action.id;
+	     class action.css"
+	     type="submit" tal:content="action.title">HTML</button>
+</div>
+
+
 <metal:block define-macro="listing">
 <div id="searchable" tal:condition="exists: brains">
   <h2 tal:content="listing_title" />
