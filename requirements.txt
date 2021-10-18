@@ -1,4 +1,5 @@
 git+https://github.com/HorsemanWSGI/roughrider.predicate.git#egg=roughrider.predicate
 git+https://github.com/HorsemanWSGI/roughrider.workflow.git#egg=roughrider.workflow
 git+https://github.com/novareto/reiter.events.git#egg=reiter.events
+git+https://github.com/novareto/reiter.application.git#egg=reiter.application
 .[test]
