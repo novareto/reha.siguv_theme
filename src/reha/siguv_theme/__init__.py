@@ -38,6 +38,10 @@ def get_theme(
     )(layout.messages)
 
     ui.register_slot(
+        request=request_type, name="above-content"
+    )(layout.above_content)
+
+    ui.register_slot(
         request=request_type, name="footer"
     )(layout.footer)
 

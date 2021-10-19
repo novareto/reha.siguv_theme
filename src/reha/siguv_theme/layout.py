@@ -1,5 +1,6 @@
 from reiter.application.browser import TemplateLoader
 from reha.siguv_theme.resources import theme
+from reha.prototypes.contents.meta import ContentAction
 
 
 TEMPLATES = TemplateLoader("./templates")
@@ -23,9 +24,22 @@ def sitecap(request, name, view):
 
 
 def globalmenu(request, name, view):
-    actions = request.app.get_actions(request)
+    actions = [
+        ContentAction(item=request.app, request=request, action=action)
+        for action in request.app.actions.partial('global')
+    ]
     return TEMPLATES["globalmenu.pt"].render(
         request=request, actions=actions)
+
+
+def above_content(request, name, view):
+    actions = [
+        ContentAction(item=request.app, request=request, action=action)
+        for action in request.app.actions.partial('content')
+    ]
+    return TEMPLATES["content.pt"].render(
+        request=request, actions=actions
+    )
 
 
 def navbar(request, name, view):

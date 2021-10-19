@@ -1,0 +1,4 @@
+<ul class="navbar-nav mr-auto">
+  <li tal:repeat="action actions"
+      tal:content="action" />
+</ul>
